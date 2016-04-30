@@ -6,6 +6,7 @@
   "scripts": {
     "test": "node_modules/.bin/mocha test/",
     "test-cov": "istanbul cover node_modules/.bin/_mocha -- --recursive",
+    "test-ci": "istanbul cover ./node_modules/mocha/bin/_mocha --report lcovonly -- -R spec && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js && rm -rf ./coverage",
     "lint": "node_modules/.bin/eslint src/**/*.js test/**/*.js"
   },
   "keywords": [
