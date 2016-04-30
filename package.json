@@ -1,0 +1,35 @@
+{
+  "name": "node-looker",
+  "version": "0.0.1",
+  "description": "Looker API client for the V3 looker api",
+  "main": "index.js",
+  "scripts": {
+    "test": "node_modules/.bin/mocha test/",
+    "test-cov": "istanbul cover node_modules/.bin/_mocha -- --recursive",
+    "lint": "node_modules/.bin/eslint src/**/*.js test/**/*.js"
+  },
+  "keywords": [
+    "looker",
+    "node"
+  ],
+  "author": "scottty881",
+  "license": "ISC",
+  "devDependencies": {
+    "code": "^2.2.1",
+    "coveralls": "^2.11.9",
+    "eslint": "^2.9.0",
+    "istanbul": "^0.4.3",
+    "mocha": "^2.4.5",
+    "pre-commit": "^1.1.2",
+    "sinon": "^1.17.3"
+  },
+  "dependencies": {
+    "bluebird": "^3.3.5",
+    "joi": "^8.0.5",
+    "moment": "^2.13.0",
+    "request": "^2.72.0"
+  },
+  "pre-commit": [
+    "lint"
+  ]
+}
